@@ -1,0 +1,51 @@
+#include<stdio.h>
+int main()
+{
+    int n,i,j,k,l,s;
+    scanf("%d",&n);
+    s=n/2;
+    if(n%2!=0)
+    {
+        n++;
+        s=(n-1)/2;
+    }
+    for(i=1;i<=(n/2);i++)
+    {
+        for(j=1;j<=(n/2)-i;j++)
+        {
+            printf("_");
+        }
+        printf("*");
+        for(k=1;k<=(i-1)*2-1;k++)
+        {
+            printf("_");
+        }
+        if(i!=1)
+            printf("*");
+        for(l=1;l<=(n/2)-i;l++)
+        {
+            printf("_");
+        }
+        printf("\n");
+    }
+    for(i=s;i>=1;i--)
+    {
+        for(j=1;j<=(n/2)-i;j++)
+        {
+            printf("_");
+        }
+        printf("*");
+        for(k=1;k<=(i-1)*2-1;k++)
+        {
+            printf("_");
+        }
+        if(i!=1)
+            printf("*");
+        for(l=1;l<=(n/2)-i;l++)
+        {
+            printf("_");
+        }
+        printf("\n");
+    }
+    return 0;
+}
